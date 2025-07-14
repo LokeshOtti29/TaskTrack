@@ -15,9 +15,6 @@ const Home = () => {
           <div>
             <Sidebar />
           </div>
-          <div>
-            <Rendercomponent />
-          </div>
         </div>
       </main>
     </div>
