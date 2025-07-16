@@ -13,7 +13,7 @@ const Home = () => {
       <main>
         <div>
           <div>
-            <Sidebar />
+            {/* <Sidebar /> */}
           </div>
         </div>
       </main>
