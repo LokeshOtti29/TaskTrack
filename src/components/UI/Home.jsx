@@ -16,7 +16,7 @@ const Home = () => {
         <div className="basis-1/6 h-full">
           <Sidebar setPage={setPage} />
         </div>
-        <div className="basis-4/6  ml-12 mt-8 mb-8 flex flex-col items-start pl-8 pt-4 pr-8 border border-black rounded-lg">
+        <div className="basis-4/6  ml-12 mt-8 mb-8 flex flex-col items-start pl-8 pt-4 pr-8 border shadow-lg rounded-lg">
           <Rendercomponent page={page} />
         </div>
       </main>
