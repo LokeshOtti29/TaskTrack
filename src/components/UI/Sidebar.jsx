@@ -1,7 +1,9 @@
 import React from "react";
 import { SIDE_BAR } from "../../constants/constant";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ setPage }) => {
+  const navigate = useNavigate();
   return (
     <div className="h-full bg-[rgb(246,130,122)] text-white rounded-r-lg pt-4">
       <div className="relative flex flex-col items-center">
@@ -23,7 +25,7 @@ const Sidebar = ({ setPage }) => {
             <img src={sidebar.IMAGE} alt={sidebar.NAME} className="w-6 h-6" />
             <button
               className="text-left hover:underline"
-              onClick={() => setPage(index)}
+              onClick={() => navigate(sidebar.ROUTE)}
             >
               {sidebar.NAME}
             </button>
