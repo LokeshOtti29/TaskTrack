@@ -6,6 +6,7 @@ import Dashboard from "./Dashboard";
 import Home from "./Home";
 import Mytask from "./Mytask";
 import SignUp from "../Auth/SignUp";
+import Pagenotfound from "./Pagenotfound";
 
 const Rendercomponent = () => {
   const routes = useRoutes([
@@ -25,6 +26,10 @@ const Rendercomponent = () => {
     {
       path: "/Sign-up",
       element: <SignUp />,
+    },
+    {
+      path: "*",
+      element: <Pagenotfound />,
     },
   ]);
   return routes;
