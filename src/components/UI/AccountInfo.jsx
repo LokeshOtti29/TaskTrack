@@ -2,7 +2,7 @@ import React from "react";
 
 const AccountInfo = () => {
   return (
-    <div className="w-full h-full box-border px-2 ">
+    <div className="w-full h-full box-border px-2 py-2 ">
       <div>
         <span className="font-semibold text-xl">Account Information</span>
       </div>
