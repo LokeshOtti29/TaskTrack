@@ -11,7 +11,7 @@ const Home = () => {
         <Navbar />
       </header>
 
-      <main className="flex flex-1 flex-row gap-2">
+      <main className="flex flex-1 flex-row gap-2 overflow-hidden">
         <div className="basis-1/6">
           <Sidebar />
         </div>
