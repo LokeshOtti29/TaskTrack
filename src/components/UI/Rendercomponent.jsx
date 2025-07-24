@@ -11,7 +11,7 @@ import Pagenotfound from "./Pagenotfound";
 const Rendercomponent = () => {
   const routes = useRoutes([
     {
-      path: "/Home",
+      path: "/",
       element: <Home />,
       children: [
         { path: "Dashboard", element: <Dashboard /> },

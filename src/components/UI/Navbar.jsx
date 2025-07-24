@@ -3,7 +3,7 @@ import Search from "./Search";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-row items-center justify-between py-4 my-4 px-6 shadow-lg">
+    <nav className="flex flex-row items-center justify-between py-2 my-4 px-6 shadow-lg">
       <div className="text-xl">
         <h1>
           <span className="text-[rgb(246,130,122)] font-bold">Task</span>-
