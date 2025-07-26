@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./Card";
+import Doughnutchart from "./Doughnut";
+import { DASHBORAD } from "../../constants/constant";
 
 const Dashboard = () => {
   return (
@@ -18,7 +20,33 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="border col-span-2 row-span-2 gap-2"></div>
+      <div className="border col-span-2 row-span-2 p-4 flex flex-col gap-6">
+        <span className="text-left text-lg font-semibold text-[rgb(246,130,122)]">
+          Task Status
+        </span>
+
+        <div className="flex flex-row justify-between items-center gap-4">
+          <div className="w-1/3 min-w-[120px] flex justify-center">
+            <Doughnutchart
+              status={DASHBORAD.COMPLETED}
+              color={DASHBORAD.COL_COMP}
+            />
+          </div>
+          <div className="w-1/3 min-w-[120px] flex justify-center">
+            <Doughnutchart
+              status={DASHBORAD.IN_PROGRESS}
+              color={DASHBORAD.COL_PROG}
+            />
+          </div>
+          <div className="w-1/3 min-w-[120px] flex justify-center">
+            <Doughnutchart
+              status={DASHBORAD.NOT_STARTED}
+              color={DASHBORAD.COL_NSTART}
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="border col-span-2 row-span-2 gap-2"></div>
     </div>
   );
