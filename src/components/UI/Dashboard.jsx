@@ -47,7 +47,7 @@ const Dashboard = () => {
   ];
   return (
     <div className="h-[100vh] w-full grid grid-cols-4 grid-rows-4 gap-2 mt-4 mb-4 ml-4 overflow-hidden">
-      <div className="col-span-2 row-span-4 gap-2 m-2 flex flex-col p-4 rounded-lg shadow-xl">
+      <div className="border col-span-2 row-span-4 gap-2 flex flex-col p-4 rounded-lg">
         <div className="flex flex-row items-center justify-between m-2">
           <h3 className="text-[rgb(246,130,122)] font-semibold">Task</h3>
           <button className="flex flex-row items-center gap-1 text-gray-400 hover:text-gray-600 transition">
@@ -61,7 +61,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="col-span-2 row-span-2 p-4 m-2 flex flex-col gap-6 rounded-lg shadow-xl">
+      <div className="border col-span-2 row-span-2 p-4 flex flex-col gap-6 rounded-lg">
         <span className="text-left  font-semibold text-[rgb(246,130,122)]">
           Task Status
         </span>
@@ -88,7 +88,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className=" col-span-2 row-span-2 gap-2 flex flex-col p-4 rounded-lg shadow-xl m-2">
+      <div className="border col-span-2 row-span-2 gap-2 flex flex-col p-4 rounded-lg">
         <div className="flex flex-row items-center justify-between m-2">
           <h3 className="text-[rgb(246,130,122)] font-semibold">
             Completed Task
