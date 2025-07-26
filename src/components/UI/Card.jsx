@@ -1,48 +1,6 @@
 import React from "react";
 
-const Card = () => {
-  const cards = [
-    {
-      Title: "Your profile information needs to be updated.",
-      message:
-        "Don't forget to complete your profile by filling in your job position and contact number. A complete profile increases your visibility and helps others connect with you professionally.",
-      priority: "High",
-      status: "Not Started",
-      Timing: "29/05/2025",
-    },
-    {
-      Title: "Your profile information needs to be updated.",
-      message:
-        "Don't forget to complete your profile by filling in your job position and contact number. A complete profile increases your visibility and helps others connect with you professionally.",
-      priority: "High",
-      status: "Completed",
-      Timing: "29/05/2025",
-    },
-    {
-      Title: "Your profile information needs to be updated.",
-      message:
-        "Don't forget to complete your profile by filling in your job position and contact number. A complete profile increases your visibility and helps others connect with you professionally.",
-      priority: "High",
-      status: "Completed",
-      Timing: "29/05/2025",
-    },
-    {
-      Title: "Your profile information needs to be updated.",
-      message:
-        "Don't forget to complete your profile by filling in your job position and contact number. A complete profile increases your visibility and helps others connect with you professionally.",
-      priority: "High",
-      status: "Completed",
-      Timing: "29/05/2025",
-    },
-    {
-      Title: "Your profile information needs to be updated.",
-      message:
-        "Don't forget to complete your profile by filling in your job position and contact number. A complete profile increases your visibility and helps others connect with you professionally.",
-      priority: "High",
-      status: "Completed",
-      Timing: "29/05/2025",
-    },
-  ];
+const Card = ({ cards }) => {
   return (
     <div>
       {cards.map((val) => {
