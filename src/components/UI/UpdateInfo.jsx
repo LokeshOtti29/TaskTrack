@@ -1,34 +1,26 @@
-import React, { useState } from "react";
-import UpdateInfo from "./UpdateInfo";
+import React from "react";
 
-const AccountInfo = () => {
-  const [showmodal, setModal] = useState(false);
+const UpdateInfo = ({ setModal }) => {
   return (
-    <div className="w-full h-full box-border px-2 py-2 ">
-      <div>
-        <span className="font-semibold text-xl">Account Information</span>
-      </div>
-      <div className="mt-2">
-        <div className="my-2 flex flex-row items-center gap-2">
-          <img
-            src="/me.jpg"
-            alt="Avatar"
-            className="w-20 h-20 rounded-full object-cover"
-          />
-          <div className="flex flex-col">
-            <span className="block font-semibold">Lokesh Otti</span>
-            <span className="text-sm">lokeshotti01@gmail.com</span>
-          </div>
+    <div className="fixed top-0 left-0 z-50 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50">
+      <div className="w-[25%] flex flex-col items-end">
+        <div className="z-50 m-2">
+          <button
+            className="text-white  text-xl "
+            onClick={() => setModal(false)}
+          >
+            &#10005;
+          </button>
         </div>
 
-        <div className="w-full  mx-auto p-4 shadow-lg rounded-lg box-border bg-white">
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="w-[100%]  mx-auto p-6 shadow-lg rounded-lg box-border bg-white">
+          <form className="w-full flex flex-col gap-4">
             <div className="flex flex-col gap-1">
               <label className="font-semibold">First Name</label>
               <input
                 disabled
                 type="text"
-                className="border rounded-lg p-2"
+                className="border rounded-lg p-2 w-[100%]"
                 placeholder="Enter your first name"
               />
             </div>
@@ -77,23 +69,15 @@ const AccountInfo = () => {
               <button
                 type="button"
                 className="flex-1 md:flex-none w-full md:w-[10vw] min-w-[120px] bg-[rgb(246,130,122)] text-white p-2 rounded"
-                onClick={() => setModal(true)}
               >
-                Update Info
-              </button>
-              <button
-                type="button"
-                className="flex-1 md:flex-none w-full md:w-[10vw] min-w-[120px] bg-[rgb(246,130,122)] text-white p-2 rounded"
-              >
-                Change Password
+                Save Changes
               </button>
             </div>
           </form>
         </div>
       </div>
-      {showmodal && <UpdateInfo setModal={setModal} />};
     </div>
   );
 };
 
-export default AccountInfo;
+export default UpdateInfo;
