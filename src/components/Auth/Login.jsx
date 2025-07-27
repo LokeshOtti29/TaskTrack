@@ -18,7 +18,7 @@ const Login = () => {
   } = useForm({ resolver: zodResolver(schema) });
 
   const onSubmit = (data) => {
-    console.log("form submitted", data);
+    console.log("form submitted");
   };
   return (
     <div className="w-full min-h-screen bg-[rgb(246,130,122)] relative">
