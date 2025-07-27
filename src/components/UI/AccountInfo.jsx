@@ -102,8 +102,8 @@ const AccountInfo = () => {
           </form>
         </div>
       </div>
-      {showmodal && <UpdateInfo setModal={setModal} />};
-      {passmodal && <ChangePassword setPassmodal={setPassmodal} />};
+      {showmodal && <UpdateInfo setModal={setModal} />}
+      {passmodal && <ChangePassword setPassmodal={setPassmodal} />}
     </div>
   );
 };
