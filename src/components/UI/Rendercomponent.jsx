@@ -7,6 +7,8 @@ import Home from "./Home";
 import Mytask from "./Mytask";
 import SignUp from "../Auth/SignUp";
 import Pagenotfound from "./Pagenotfound";
+import UpdateInfo from "./UpdateInfo";
+import ChangePassword from "./ChangePassword";
 
 const Rendercomponent = () => {
   const routes = useRoutes([
@@ -15,7 +17,14 @@ const Rendercomponent = () => {
       element: <Home />,
       children: [
         { path: "Dashboard", element: <Dashboard /> },
-        { path: "AccountInfo", element: <AccountInfo /> },
+        {
+          path: "AccountInfo",
+          element: <AccountInfo />,
+          children: [
+            { path: "UpdateInfo", element: <UpdateInfo /> },
+            { path: "ChangePassword", element: <ChangePassword /> },
+          ],
+        },
         { path: "Mytask", element: <Mytask /> },
       ],
     },

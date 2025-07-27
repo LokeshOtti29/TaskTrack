@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import UpdateInfo from "./UpdateInfo";
+import { useNavigate } from "react-router-dom";
 
 const AccountInfo = () => {
   const [showmodal, setModal] = useState(false);
+  const navigate = useNavigate();
   return (
     <div className="w-full h-full box-border px-2 py-2 ">
       <div>
@@ -77,7 +79,10 @@ const AccountInfo = () => {
               <button
                 type="button"
                 className="flex-1 md:flex-none w-full md:w-[10vw] min-w-[120px] bg-[rgb(246,130,122)] text-white p-2 rounded"
-                onClick={() => setModal(true)}
+                onClick={() => {
+                  setModal(true);
+                  navigate("/AccountInfo/UpdateInfo");
+                }}
               >
                 Update Info
               </button>
