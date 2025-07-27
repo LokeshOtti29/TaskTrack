@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import UpdateInfo from "./UpdateInfo";
 import { useNavigate } from "react-router-dom";
+import ChangePassword from "./ChangePassword";
 
 const AccountInfo = () => {
   const [showmodal, setModal] = useState(false);
+  const [passmodal, setPassmodal] = useState(false);
   const navigate = useNavigate();
   return (
     <div className="w-full h-full box-border px-2 py-2 ">
@@ -89,6 +91,10 @@ const AccountInfo = () => {
               <button
                 type="button"
                 className="flex-1 md:flex-none w-full md:w-[10vw] min-w-[120px] bg-[rgb(246,130,122)] text-white p-2 rounded"
+                onClick={() => {
+                  setPassmodal(true);
+                  navigate("/AccountInfo/ChangePassword");
+                }}
               >
                 Change Password
               </button>
@@ -97,6 +103,7 @@ const AccountInfo = () => {
         </div>
       </div>
       {showmodal && <UpdateInfo setModal={setModal} />};
+      {passmodal && <ChangePassword setPassmodal={setPassmodal} />};
     </div>
   );
 };
