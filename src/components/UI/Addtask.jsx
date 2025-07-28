@@ -134,7 +134,7 @@ const Addtask = ({ setAddtask }) => {
                 className="flex-1 md:flex-none w-full md:w-[10vw] min-w-[120px] bg-[rgb(246,130,122)] text-white p-2 rounded"
                 onClick={() => navigate("/Dashboard")}
               >
-                Update Password
+                Add Task
               </button>
             </div>
           </form>
