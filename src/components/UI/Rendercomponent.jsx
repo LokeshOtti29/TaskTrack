@@ -9,6 +9,7 @@ import SignUp from "../Auth/SignUp";
 import Pagenotfound from "./Pagenotfound";
 import UpdateInfo from "./UpdateInfo";
 import ChangePassword from "./ChangePassword";
+import Addtask from "./Addtask";
 
 const Rendercomponent = () => {
   const routes = useRoutes([
@@ -16,7 +17,11 @@ const Rendercomponent = () => {
       path: "/",
       element: <Home />,
       children: [
-        { path: "Dashboard", element: <Dashboard /> },
+        {
+          path: "Dashboard",
+          element: <Dashboard />,
+          children: [{ path: "Addtask", element: <Addtask /> }],
+        },
         {
           path: "AccountInfo",
           element: <AccountInfo />,

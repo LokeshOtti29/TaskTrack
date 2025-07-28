@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import Doughnutchart from "./Doughnut";
 import { DASHBORAD } from "../../constants/constant";
+import Addtask from "./Addtask";
+import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
+  const [addtask, setAddtask] = useState(false);
+  const navigate = useNavigate();
   const cards = [
     {
       Title: "Your profile information needs to be updated.",
@@ -50,7 +54,13 @@ const Dashboard = () => {
       <div className="border col-span-2 row-span-4 gap-2 flex flex-col p-4 rounded-lg">
         <div className="flex flex-row items-center justify-between m-2">
           <h3 className="text-[rgb(246,130,122)] font-semibold">Task</h3>
-          <button className="flex flex-row items-center gap-1 text-gray-400 hover:text-gray-600 transition">
+          <button
+            className="flex flex-row items-center gap-1 text-gray-400 hover:text-gray-600 transition"
+            onClick={() => {
+              setAddtask(true);
+              navigate("/Dashboard/Addtask");
+            }}
+          >
             <img src="/plus.png" alt="plus" className="h-4 w-4" />
             <span>Add Task</span>
           </button>
@@ -99,6 +109,7 @@ const Dashboard = () => {
           <Card cards={cards.filter((card) => card.status === "Completed")} />
         </div>
       </div>
+      {addtask && <Addtask setAddtask={setAddtask} />}
     </div>
   );
 };
