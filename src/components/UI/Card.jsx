@@ -1,11 +1,17 @@
 import React from "react";
 
-const Card = ({ cards }) => {
+const Card = ({ cards, handledisplay }) => {
   return (
     <div>
-      {cards.map((val) => {
+      {cards.map((val, index) => {
         return (
-          <div className="flex flex-col gap-3 border rounded-lg m-2 p-2 pl-4 pr-4">
+          <div
+            key={index}
+            className="flex flex-col gap-3 border rounded-lg m-2 p-2 pl-4 pr-4"
+            onClick={() => {
+              handledisplay(val);
+            }}
+          >
             <div className="font-bold">
               <h1>{val.Title}</h1>
             </div>
