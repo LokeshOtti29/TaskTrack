@@ -10,6 +10,7 @@ import Pagenotfound from "./Pagenotfound";
 import UpdateInfo from "./UpdateInfo";
 import ChangePassword from "./ChangePassword";
 import Addtask from "./Addtask";
+import Edittask from "./Edittask";
 
 const Rendercomponent = () => {
   const routes = useRoutes([
@@ -30,7 +31,11 @@ const Rendercomponent = () => {
             { path: "ChangePassword", element: <ChangePassword /> },
           ],
         },
-        { path: "Mytask", element: <Mytask /> },
+        {
+          path: "Mytask",
+          element: <Mytask />,
+          children: [{ path: "EditTask", element: <Edittask /> }],
+        },
       ],
     },
     {

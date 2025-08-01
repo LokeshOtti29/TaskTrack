@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import Display from "./Display";
+import Edittask from "./Edittask";
 
 const Mytask = () => {
+  const [edit, setEdit] = useState(false);
   const [display, setDisplay] = useState({
     title: "",
     priority: "",
@@ -74,8 +76,9 @@ const Mytask = () => {
         </div>
       </div>
       <div className="border col-span-2 row-span-4 p-4 flex flex-col gap-6 rounded-lg">
-        <Display display={display} />
+        <Display display={display} setEdit={setEdit} />
       </div>
+      {edit && <Edittask setEdit={setEdit} />}
     </div>
   );
 };
