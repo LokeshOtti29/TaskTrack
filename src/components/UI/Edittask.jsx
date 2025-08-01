@@ -19,7 +19,7 @@ const schema = z.object({
     .min(1, "Please Enter the Description")
     .max(50, "Description should be less than 50 characters"),
 });
-const Edittask = ({ setAddtask }) => {
+const Edittask = ({ setEdit }) => {
   const navigate = useNavigate();
   const {
     register,
@@ -36,8 +36,8 @@ const Edittask = ({ setAddtask }) => {
           <button
             className="text-white  text-xl "
             onClick={() => {
-              setAddtask(false);
-              navigate("/Dashboard");
+              setEdit(false);
+              navigate("/Mytask");
             }}
           >
             &#10005;
@@ -45,7 +45,7 @@ const Edittask = ({ setAddtask }) => {
         </div>
         <div className="w-[100%]  mx-auto p-6 shadow-lg rounded-lg box-border bg-white flex flex-col gap-2">
           <div className="m-2">
-            <span className="text-lg font-semibold">Add New Task</span>
+            <span className="text-lg font-semibold">Edit Task</span>
           </div>
           <form
             className="w-[70%] m-2 flex flex-col"
@@ -132,9 +132,9 @@ const Edittask = ({ setAddtask }) => {
               <button
                 type="submit"
                 className="flex-1 md:flex-none w-full md:w-[10vw] min-w-[120px] bg-[rgb(246,130,122)] text-white p-2 rounded"
-                onClick={() => navigate("/Dashboard")}
+                onClick={() => navigate("/EditTask")}
               >
-                Add Task
+                Edit Task
               </button>
             </div>
           </form>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Display = ({ display }) => {
+const Display = ({ display, setEdit }) => {
   if (!display.title) {
     return (
       <div className="text-gray-500 text-center mt-20 italic">
@@ -64,7 +64,11 @@ const Display = ({ display }) => {
           <button>
             <img src="/delete.png" alt="delete" />
           </button>
-          <button>
+          <button
+            onClick={() => {
+              setEdit(true);
+            }}
+          >
             <img src="/edit.png" alt="delete" />
           </button>
         </div>
