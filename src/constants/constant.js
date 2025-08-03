@@ -14,11 +14,6 @@ export const SIDE_BAR = [
     NAME: "My Task",
     ROUTE: "Mytask",
   },
-  {
-    IMAGE: "/Setting.png",
-    NAME: "Settings",
-    ROUTE: "Settings",
-  },
 ];
 
 export const DASHBORAD = {
