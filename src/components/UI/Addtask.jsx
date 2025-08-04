@@ -52,7 +52,7 @@ const Addtask = ({ setAddtask }) => {
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="flex flex-col gap-1">
-              <label className="font-semibold">Title</label>
+              <label className="font-semibold">Titl</label>
               <input
                 type="text"
                 className="border rounded-lg p-2 w-[100%]"
